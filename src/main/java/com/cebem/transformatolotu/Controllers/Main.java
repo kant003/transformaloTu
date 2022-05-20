@@ -31,8 +31,15 @@ public class Main {
         Game c = zService.getGameFromAPI(gamename);
         String mnsj  ="";
         for (Data data : c.data) {
-            mnsj+= data.name + "-" + data.released_date + "<br/>";
+            mnsj+= "<h3> Nombre Completo :  </h3>" +"<h3 style='color:blue;'>" + data.name  + "</h3>"+ "      "+ "<h3> Fecha Publicación : </h3>" +"<h3 style='color:blue;'>" + data.released_date +"</h3>" +"<br/>";
+        } 
+
+        if(c.data.size() == 0){
+            return "<h3> Juego no encontrado </h3>";
+        }else{
+            return mnsj;
         }
-        return mnsj;
+
+        
     }
 }
