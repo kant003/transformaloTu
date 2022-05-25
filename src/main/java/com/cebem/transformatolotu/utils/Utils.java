@@ -1,5 +1,8 @@
 package com.cebem.transformatolotu.utils;
 
+import com.cebem.transformatolotu.models.BPokemon;
+import com.cebem.transformatolotu.models.PokemonType;
+
 public class Utils {
   
     public static String isParImpar(String number) {
@@ -8,4 +11,10 @@ public class Utils {
         
         
     }
+
+    public static String getTypeUrl(BPokemon pokemon, int index) {
+		PokemonType pokemonType = pokemon.types.get(index);
+		
+		return pokemonType.type.url;
+	}
 }
