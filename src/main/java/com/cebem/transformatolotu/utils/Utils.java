@@ -17,4 +17,14 @@ public class Utils {
 		
 		return pokemonType.type.url;
 	}
+    public static int sumaNums (String cadena) {
+				
+        String cadena1 = cadena;
+        String[] nums = cadena1.split(",");
+        int suma=0;
+        for(String num: nums) {
+            suma+= Integer.parseInt(num);
+        }
+        return suma;
+    }
 }
