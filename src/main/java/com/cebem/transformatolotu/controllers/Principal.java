@@ -227,4 +227,14 @@ public class Principal {
 
        return "No existe ventaja clara";
    }
+   /**
+    * Entregamos un string que contenga varios numeros separados por comas (8,3,2,5) y como resultado recibimos la suma de estos.
+    * @param numeros ( separados por comas )
+    * @return suma de los numeros
+    */
+   @GetMapping("/sumaNums/{numeros}")
+   public String sumaNum(@PathVariable String numeros) {
+       return "La suma es " + Utils.sumaNums(numeros);
+
+   }
 }
